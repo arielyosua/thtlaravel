@@ -1,0 +1,382 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #35424a;
+    color: #ffffff;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+}
+
+.logo {
+    height: 80px;
+    margin-right: 20px;
+}
+
+.header-text {
+    display: flex;
+    flex-direction: column;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header h2 {
+    margin: 0;
+    font-size: 1.2em;
+    color: #dddddd;
+}
+
+nav {
+    margin-left: auto;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    position: relative;
+}
+
+nav ul li {
+    position: relative;
+    margin-left: 15px;
+}
+
+nav .dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #536b7a;
+    border-radius: 5px;
+    z-index: 1000;
+}
+
+nav ul li:hover .dropdown {
+    display: block;
+}
+
+nav .dropdown li {
+    margin: 0;
+}
+
+nav .dropdown a {
+    display: block;
+    padding: 10px;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+nav .dropdown a:hover {
+    background: #303030;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+section {
+    margin-top: 100px;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 5px;
+}
+
+section h2 {
+    text-align: center;
+}
+
+section p {
+    margin-right: 30px;
+    margin-left: 30px;
+    text-align: justify;
+}
+
+section ol {
+    margin-left: 60px;
+}
+
+.tentanggpib{
+    margin-top: 120px;
+}
+
+.visimisimotto{
+    margin-top: 120px;
+}
+
+.welcome-section {
+    margin-top: 80px;
+    background-image: url("/images/backgroundhome.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    border-radius: 0px;
+}
+
+
+.welcome-content h1 {
+    color: #35424a;
+    font-size: 4em;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7)
+}
+
+.welcome-content h2 {
+    text-shadow:0em;
+    color: #35424a;
+    font-size: 2em;
+    margin: 10px 0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5)
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #35424a;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+table {
+    width: 80%;
+    max-width: 800px;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #35424a;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #35424a;
+    color: white;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tbody tr:hover {
+    background-color: #e0e0e0;
+}
+
+form {
+    border-radius: 8px;
+    padding: 30px;
+    margin: 20px auto;
+    background-color: #daf4f4;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    width: 500px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+form > h2 {
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.form-group label {
+    font-weight: bold;
+    color: #333;
+    font-size: 0.9em;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+
+.form-group textarea {
+    resize: none;
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+button[type="submit"],
+button[type="reset"] {
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 48%;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"] {
+    background-color: #2F4F4F;
+    color: #fff;
+}
+
+button[type="reset"] {
+    background-color: #74282a;
+    color: #fff;
+}
+
+button[type="submit"]:hover,
+button[type="reset"]:hover {
+    background-color: #333;
+}
+
+@media (max-width: 600px) {
+    form {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .form-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    button[type="submit"],
+    button[type="reset"] {
+        width: 100%;
+    }
+}
+
+.error {
+    color: red;
+    font-size: 0.8em;
+    margin-top: 5px;
+}
+
+.success-message {
+    padding: 15px;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    margin: 10px auto;
+    width: 90%;
+    max-width: 500px;
+    font-size: 1em;
+}
+
+#contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+}
+
+#contact h2 {
+    font-size: 24px;
+    text-align: center;
+}
+
+.contact-info {
+    text-align: center;
+    font-size: 10px;
+    line-height: 1.6;
+    max-width: 500px;
+}
+
+.gallery {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+.gallery h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 1200px) {
+    .gallery-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 800px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #35424a;
+    color: #ffffff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
